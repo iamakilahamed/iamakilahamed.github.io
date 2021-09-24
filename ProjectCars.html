@@ -59,26 +59,32 @@
               expansion.<hr>
               <img src="images/LegoCarProjectMain.png" alt="" class="img-fluid">
             </p>
-            <h3>Wheels</h3>
-            <h5>Suspension</h5>
+            <h3>Suspension</h3>
             <div class="iframe-container">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/RaBrEv-4kbI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <h5>Slip Angles and Transient Longitudinal Forces</h5>
+            <h3>Slip Angles and Transient Longitudinal Forces</h3>
             <p>
               Sliding is prevented along the slope in the lateral and longitudinal direction when the clutch is engaged.
             </p>
             <div class="iframe-container">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/MHc4z4Pjbgo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <h3>Engine, Gearbox, Differential and Clutch</h3>
+            <h3>Physics Substepping</h3>
             <p>
-              How they work together
+              For smoother movement controls, I realised that the physics need to be calculated with high frequency and I enabled physics substepping within the project settings.
+              However, the default pawn's tick event is still not enough. Therefore, I used a <a href="https://github.com/BoredEngineer/MMT_Plugin">MMT Pawn</a> class for the car instead 
+              of Unreal Engine's default pawn class as it has a substep tick event that is called on each sub step which is not avilable in the default pawn class. 
+            </p>
+            <h3>Transmission Modes</h3>
+            <p>
+              The mode of transmission can be customised to either <b>Automatic</b> or <b>Manual</b> transmissions to suit the player's experience and preference.
+              <img src="images/AutomaticManualTransmissions.jpg" alt="" class="img-fluid">
             </p>
             <h3>Drivetrain Assembly</h3>
             <p>
-              The following code is used to update the physics of the wheels. This can be used to customise the drivetrain of the vehicle to make it Front Wheel Drive (FWD), Rear Wheel
-              Drive (RWD) or All-Wheel Drive (AWD). The code snippet below shows an example for a RWD vehicle. 
+              The following code is used to update the physics of the wheels. This can be used to customise the drivetrain of the vehicle to make it <b>Front Wheel Drive (FWD)</b>, <b>Rear Wheel
+              Drive (RWD)</b> or <b>All-Wheel Drive (AWD)</b>. The code snippet below shows an example for a RWD vehicle. 
               <img src="images/Drivetrain.jpg" alt="" class="img-fluid">
             </p>
             <h3>Camera System</h3>
